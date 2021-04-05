@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "820236220984",
+    "project_id": "exotically",
+    "storage_bucket": "exotically.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:820236220984:android:d07004bafe833a1ffbc4cd",
+        "android_client_info": {
+          "package_name": "com.example.exotically"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "820236220984-2h2hhqjvrgu8apvg1sade3bnd63bj4o7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.exotically",
+            "certificate_hash": "638e226b2412edb4d3b8e4aec7fc495ff448fec5"
+          }
+        },
+        {
+          "client_id": "820236220984-bum2a5aki69un4fb0u6v4ok006cjjvh1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArI5v7an6ZUk9MDWNfdoRkN0VoSMRgUqc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "820236220984-bum2a5aki69un4fb0u6v4ok006cjjvh1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
