@@ -3,9 +3,11 @@ package com.example.exotically;
 public class cards {
     private String userId;
     private String name;
-    public cards(String userId , String name){
+    private String profileImageUrl;
+    public cards(String userId , String name, String profileImageUrl){
         this.userId = userId;
         this.name = name;
+        this.profileImageUrl = profileImageUrl;
     }
 
     public String getUserId(){
@@ -19,5 +21,12 @@ public class cards {
     }
     public void setName(String name){
         this.name = name;
+    }
+
+    public String getProfileImageUrl(){
+        return profileImageUrl;
+    }
+    public void setProfileImageUrl(String profileImageUrl){
+        this.profileImageUrl = profileImageUrl;
     }
 }
