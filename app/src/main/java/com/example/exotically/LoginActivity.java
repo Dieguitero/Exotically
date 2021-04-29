@@ -20,6 +20,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
     private Button mLogin;
+    private boolean changing;
 
     private EditText mEmail, mPassword;
 
@@ -31,11 +32,14 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         mAuth = FirebaseAuth.getInstance();
+        changing = false;
+
         firebaseAuthStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                if (user != null){
+                if (user != null && !changing){
+                    changing = true;
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(intent);
                     finish();
@@ -53,6 +57,8 @@ public class LoginActivity extends AppCompatActivity {
         mLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
+                mLogin.setEnabled(false);
+
                 final String email = mEmail.getText().toString();
                 final String password = mPassword.getText().toString();
                 mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
@@ -78,6 +84,13 @@ public class LoginActivity extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         mAuth.addAuthStateListener(firebaseAuthStateListener);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        changing = false;
+        mLogin.setEnabled(true);
     }
 }
 

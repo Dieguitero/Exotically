@@ -108,7 +108,7 @@ public class SettingsActivity extends AppCompatActivity {
                         phone = map.get("phone").toString();
                         mPhoneField.setText(phone);
                     }
-                    Glide.clear((mProfileImage));
+                    //Glide.clear((mProfileImage));
 
                     if(map.get("profileImageUrl") !=null){
                         profileImageUrl = map.get("profileImageUrl").toString();
