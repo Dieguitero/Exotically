@@ -58,7 +58,7 @@ public class RegistrationActivity extends AppCompatActivity {
             }
         };
 
-        mRegister   = (Button) findViewById(R.id.register);
+        mRegister   = (Button) findViewById(R.id.register); //Comment
         mEmail      = (EditText) findViewById(R.id.email);
         mPassword   = (EditText) findViewById(R.id.password);
 
